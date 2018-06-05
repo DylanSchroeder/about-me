@@ -1,25 +1,25 @@
 'use strict';
 
-var question1 = prompt('Am I from Earth?');
-var q2 = prompt('Am I a male?');
-var q3 = prompt('Do I eat food?');
-var q4 = prompt('Do I go outside?');
-var q5 = prompt('Do I own a pet?');
+var firstQuestion = prompt('Am I from Earth?');
+var secondQuestion = prompt('Am I a male?');
+var thirdQuestion = prompt('Do I eat food?');
+var fourthQuestion = prompt('Do I go outside?');
+var fifthQuestion = prompt('Do I own a pet?');
 
-if (question1 === 'Y'){
+if (firstQuestion === 'Y'){
     alert('yes!');
 }
-else if (question1 === 'N'){
+else if (firstQuestion === 'N'){
     alert('no!')
 }
 else {
     alert("Not a recognizable answer")
 }
 
-if (q2 === 'Y'){
+if (secondQuestion === 'Y'){
     alert('yes!');
 }
-else if (q2 === 'N'){
+else if (secondQuestion === 'N'){
     alert('no!')
 }
 else {
