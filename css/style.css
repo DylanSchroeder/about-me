@@ -1,3 +1,8 @@
 h1 {
     color: blue;
 }
+.bio-box {
+    border-width: 5px;
+    border-color: orange;
+    border-style: solid;
+}
