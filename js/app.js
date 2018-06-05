@@ -1,15 +1,17 @@
 'use strict';
 
 var firstQuestion = prompt('Am I from Earth?');
-if (firstQuestion === 'Y'){
+var sanitizedAnswer = firstQuestion.toUpperCase().trim();
+if (sanitizedAnswer === 'Y' || sanitizedAnswer === "YES"){
     alert('yes!');
 }
-else if (firstQuestion === 'N'){
-    alert('no!')
+else if (sanitizedAnswer === 'N' || sanitizedAnswer === "NO"){
+    alert('no!');
 }
 else {
-    alert("Not a recognizable answer")
+    alert("Not a recognizable answer");
 }
+/*
 var secondQuestion = prompt('Am I a male?');
 if (secondQuestion === 'Y'){
     alert('yes!');
@@ -48,9 +50,9 @@ else if (fifthQuestion === 'N'){
     alert('no!')
 }
 else {
-    alert("Not a recognizable answer")
+    alert("Not a recognizable answer") 
 }
-
+*/
 
 
 
