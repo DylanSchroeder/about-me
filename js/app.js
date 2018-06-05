@@ -11,6 +11,7 @@ else if (sanitizedAnswer === 'N' || sanitizedAnswer === "NO"){
 else {
     alert("Not a recognizable answer");
 }
+console.log('Earth? ' + sanitizedAnswer); 
 
 var secondQuestion = prompt('Am I female?');
 var sanitizedAnswer = secondQuestion.toUpperCase().trim();
@@ -23,6 +24,7 @@ else if (sanitizedAnswer === 'N' || sanitizedAnswer === "NO"){
 else {
     alert("Not a recognizable answer");
 }
+console.log('Female? ' + sanitizedAnswer); 
 
 var thirdQuestion = prompt('Do I like animals?');
 var sanitizedAnswer = thirdQuestion.toUpperCase().trim();
@@ -35,6 +37,7 @@ else if (sanitizedAnswer === 'N' || sanitizedAnswer === "NO"){
 else {
     alert("Not a recognizable answer");
 }
+console.log('Like Animals ' + sanitizedAnswer); 
 
 var fourthQuestion = prompt('Am I nervous about this class?');
 var sanitizedAnswer = fourthQuestion.toUpperCase().trim();
@@ -47,6 +50,7 @@ else if (sanitizedAnswer === 'N' || sanitizedAnswer === "NO"){
 else {
     alert("Not a recognizable answer");
 }
+console.log('Nervous? ' + sanitizedAnswer); 
 
 var fifthQuestion = prompt('Am I glad to be in this class?');
 var sanitizedAnswer = fifthQuestion.toUpperCase().trim();
@@ -59,7 +63,7 @@ else if (sanitizedAnswer === 'N' || sanitizedAnswer === "NO"){
 else {
     alert("Not a recognizable answer");
 }
-
+console.log('Glad to be here? ' + sanitizedAnswer); 
 
 
 
