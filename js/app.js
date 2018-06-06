@@ -1,5 +1,6 @@
 'use strict';
 
+/*
 var firstQuestion = prompt('Am I from Earth?');
 var sanitizedAnswer = firstQuestion.toUpperCase().trim();
 if (sanitizedAnswer === 'Y' || sanitizedAnswer === "YES"){
@@ -64,6 +65,50 @@ else {
     alert("Not a recognizable answer");
 }
 console.log('Glad to be here? ' + sanitizedAnswer); 
+*/
 
+//beginning of guessing game
+var guess = prompt('How many Fortnite wins do I have this week?');
+console.log('Guess is: ' + guess);
+var guessCount =1;
+
+while (guess !=='10') {
+    // what happens if cancel is hit
+    if (guess === null) {
+        console.log('User pressed the cancel button');
+        // Escape the loop
+        break;
+    }
+
+    var promptWarning = 'Incorrect';
+    if (guess > 10) {
+        promptWarning = 'Too High!'
+    } else if (guess < 0) {
+        promptWarning = 'Negative wins are not possible.';
+    } else {
+        promptWarning = 'Too Low!';
+    }
+    console.log(promptWarning);
+
+    guess = prompt(promptWarning +' Guess again: how many Fortnite wins do I have this week?');
+    console.log('Guess is: ' + guess);
+    guessCount = guessCount + 1;
+    console.log('guessCount is ' + guessCount);
+    console.log('about to return to top of while loop');
+}
+
+console.log('done guessing (while loop is finished)');
+
+if (guess === null) {
+    alert('Come on. I have won 10 games this week!');
+}   else {
+    console.log('no cancel');
+
+    if (guessCount === 1){
+        alert('Awesome! Right on the first guess.');
+    } else{
+        alert('You took ' + guessCount + 'guesses to get it right.');
+    }
+}
 
 
