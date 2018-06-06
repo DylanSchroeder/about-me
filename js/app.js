@@ -1,6 +1,6 @@
 'use strict';
 
-/*
+
 var firstQuestion = prompt('Am I from Earth?');
 var sanitizedAnswer = firstQuestion.toUpperCase().trim();
 if (sanitizedAnswer === 'Y' || sanitizedAnswer === "YES"){
@@ -65,9 +65,9 @@ else {
     alert("Not a recognizable answer");
 }
 console.log('Glad to be here? ' + sanitizedAnswer); 
-*/
 
-//beginning of guessing game
+
+//beginning of guessing game questions 6 & 7
 var guess = prompt('How many Fortnite wins do I have this week?');
 console.log('Guess is: ' + guess);
 var guessCount =1;
