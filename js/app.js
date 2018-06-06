@@ -107,8 +107,24 @@ if (guess === null) {
     if (guessCount === 1){
         alert('Awesome! Right on the first guess.');
     } else{
-        alert('You took ' + guessCount + 'guesses to get it right.');
+        alert('You took ' + guessCount + ' guesses to get it right.');
     }
+
+    /*
+    if (guessCount < 4) {
+        alert('That was guess ' + guessCount + ' you have 4 total guesses to get it right.');
+    } */
+
+}
+
+var hero = ['BATMAN', 'SPIDERMAN', 'GREEN ARROW', 'GREEN LANTERN', 'IRON MAN']; 
+var heroAnswer = prompt('Can you guess any of my favorite super heroes?');
+var heroAnswerTrimmedToUpper = heroAnswer.toUpperCase().trim();
+
+if (hero.indexOf(heroAnswerTrimmedToUpper) >= 0) {
+    alert('Yes! ' + heroAnswer + ' is one of my favorites!');
+} else {
+    alert('Nope');
 }
 
 
