@@ -70,9 +70,9 @@ console.log('Glad to be here? ' + sanitizedAnswer);
 //beginning of guessing game questions 6 & 7
 var guess = prompt('How many Fortnite wins do I have this week?');
 console.log('Guess is: ' + guess);
-var guessCount =1;
+var guessCount =0;
 
-while (guess !=='10') {
+while (guess !=='10' && guessCount < 5) {
     // what happens if cancel is hit
     if (guess === null) {
         console.log('User pressed the cancel button');
@@ -81,18 +81,23 @@ while (guess !=='10') {
     }
 
     var promptWarning = 'Incorrect';
-    if (guess > 10) {
-        promptWarning = 'Too High!'
-    } else if (guess < 0) {
-        promptWarning = 'Negative wins are not possible.';
-    } else {
-        promptWarning = 'Too Low!';
+    if (guessCount <5 ){
+        if (guess > 10) {
+            promptWarning = 'Too High!'
+            guessCount ++;
+        } else if (guess < 0) {
+            promptWarning = 'Negative wins are not possible.';
+            guessCount ++;
+        } else {
+            promptWarning = 'Too Low!';
+            guessCount ++;
+        }
     }
     console.log(promptWarning);
 
     guess = prompt(promptWarning +' Guess again: how many Fortnite wins do I have this week?');
     console.log('Guess is: ' + guess);
-    guessCount = guessCount + 1;
+    
     console.log('guessCount is ' + guessCount);
     console.log('about to return to top of while loop');
 }
