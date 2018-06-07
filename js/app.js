@@ -1,9 +1,10 @@
 'use strict';
-
+var questionsRight = 0;
 var firstQuestion = prompt('Am I from Earth?');
 var sanitizedAnswer = firstQuestion.toUpperCase().trim();
 if (sanitizedAnswer === 'Y' || sanitizedAnswer === "YES"){
     alert('Of course I am!');
+    questionsRight ++;
 }
 else if (sanitizedAnswer === 'N' || sanitizedAnswer === "NO"){
     alert('Who are you and where did you get that info?');
@@ -20,6 +21,7 @@ if (sanitizedAnswer === 'Y' || sanitizedAnswer === "YES"){
 }
 else if (sanitizedAnswer === 'N' || sanitizedAnswer === "NO"){
     alert('You are right, I am not a female');
+    questionsRight ++;
 }
 else {
     alert("Not a recognizable answer");
@@ -29,7 +31,8 @@ console.log('Female? ' + sanitizedAnswer);
 var thirdQuestion = prompt('Do I like animals?');
 var sanitizedAnswer = thirdQuestion.toUpperCase().trim();
 if (sanitizedAnswer === 'Y' || sanitizedAnswer === "YES"){
-    alert('Who would I be if the answer was no');
+    alert('Who would I be if the answer was no?');
+    questionsRight ++;
 }
 else if (sanitizedAnswer === 'N' || sanitizedAnswer === "NO"){
     alert('You could not be more wrong. I love animals!');
@@ -43,6 +46,7 @@ var fourthQuestion = prompt('Am I nervous about this class?');
 var sanitizedAnswer = fourthQuestion.toUpperCase().trim();
 if (sanitizedAnswer === 'Y' || sanitizedAnswer === "YES"){
     alert('Correct. I am very nervous');
+    questionsRight ++;
 }
 else if (sanitizedAnswer === 'N' || sanitizedAnswer === "NO"){
     alert('I wish I was not nervous but that is not the case.');
@@ -56,6 +60,7 @@ var fifthQuestion = prompt('Am I glad to be in this class?');
 var sanitizedAnswer = fifthQuestion.toUpperCase().trim();
 if (sanitizedAnswer === 'Y' || sanitizedAnswer === "YES"){
     alert('Altough I am nervous, I am also excited about getting better at coding so yes is the right answer');
+    questionsRight ++;
 }
 else if (sanitizedAnswer === 'N' || sanitizedAnswer === "NO"){
     alert('I regret to inform you that no is not the right answer here.');
@@ -112,6 +117,7 @@ if (guess === null) {
     } 
     if (guess == 10){
         alert('You took ' + guessCount + ' guesses to get it right.');
+        questionsRight ++;
     }
     if(guessCount == 4){
         alert('You Suck!');
@@ -133,9 +139,10 @@ while(hero.indexOf(heroAnswerTrimmedToUpper) < 0 && heroGuess < 5){
 }
 if (hero.indexOf(heroAnswerTrimmedToUpper) >= 0) {
     alert('Yes! ' + heroAnswer + ' is one of my favorites!');
+    questionsRight ++;
 }
 if(heroGuess == 5 && hero.indexOf(heroAnswerTrimmedToUpper) < 0){
     alert('You guessed wrong 6 times!');
 }
 alert('My favorite super heros are: '+ hero[0] + ', ' + hero[1] + ', ' + hero[2] + ', '+ hero[3] + ', '+ hero[4]);
-
+alert('You answered ' + questionsRight + '/7 correctly');
