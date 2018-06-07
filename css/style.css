@@ -1,3 +1,6 @@
+*{
+    background:#9bf0ff;
+}
 h1 {
     color: blue;
 }
@@ -5,4 +8,33 @@ h1 {
     border-width: 5px;
     border-color: orange;
     border-style: solid;
+}
+.image{
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    width:50%;
+}
+.top{
+    background:gray;
+}
+.list1{
+    width:50%;
+    float:left;
+}
+.list2{
+    width:50%;
+    float:left;
+}
+li a{
+    color:red;
+}
+div{
+    border-width:5px;
+    border-color:black;
+    border-style:solid;
+    box-sizing:border-box;
+}
+.bio{
+    color:blue;
 }
