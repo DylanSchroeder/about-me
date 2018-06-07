@@ -123,14 +123,19 @@ var heroAnswer = prompt('Can you guess any of my favorite super heroes?');
 var heroAnswerTrimmedToUpper = heroAnswer.toUpperCase().trim();
 var heroGuess = 0;
 while(hero.indexOf(heroAnswerTrimmedToUpper) < 0 && heroGuess < 5){
-    if (hero.indexOf(heroAnswerTrimmedToUpper) >= 0) {
-        alert('Yes! ' + heroAnswer + ' is one of my favorites!');
-        heroGuess = 7;
-    } else {
+    if (heroGuess < 5) {
         promptWarning = ('Nope -');
         heroGuess ++;
     }
-    console.log('HeroGuess: ' + heroGuess);
     heroAnswer = prompt(promptWarning + 'Try again: Can you guess any of my favorite super heroes?');
+    heroAnswerTrimmedToUpper = heroAnswer.toUpperCase().trim();
+    console.log('HeroGuess: ' + heroGuess);
 }
-alert('You guessed wrong 6 times!');
+if (hero.indexOf(heroAnswerTrimmedToUpper) >= 0) {
+    alert('Yes! ' + heroAnswer + ' is one of my favorites!');
+}
+if(heroGuess == 5 && hero.indexOf(heroAnswerTrimmedToUpper) < 0){
+    alert('You guessed wrong 6 times!');
+}
+alert('My favorite super heros are: '+ hero[0] + ', ' + hero[1] + ', ' + hero[2] + ', '+ hero[3] + ', '+ hero[4]);
+
