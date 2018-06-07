@@ -139,13 +139,13 @@ function question7(){
     var heroAnswerTrimmedToUpper = heroAnswer.toUpperCase().trim();
     var heroGuess = 0;
     while(hero.indexOf(heroAnswerTrimmedToUpper) < 0 && heroGuess < 5){
+        console.log('HeroGuess: ' + heroGuess);
         if (heroGuess < 5) {
            promptWarning = ('Nope -');
            heroGuess ++;
        }
       heroAnswer = prompt(promptWarning + 'Try again: Can you guess any of my favorite super heroes?');
        heroAnswerTrimmedToUpper = heroAnswer.toUpperCase().trim();
-       console.log('HeroGuess: ' + heroGuess);
     }
     if (hero.indexOf(heroAnswerTrimmedToUpper) >= 0) {
        alert('Yes! ' + heroAnswer + ' is one of my favorites!');
