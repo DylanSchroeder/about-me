@@ -1,6 +1,5 @@
 'use strict';
 
-
 var firstQuestion = prompt('Am I from Earth?');
 var sanitizedAnswer = firstQuestion.toUpperCase().trim();
 if (sanitizedAnswer === 'Y' || sanitizedAnswer === "YES"){
@@ -97,7 +96,6 @@ while (guess !=='10' && guessCount < 4) {
 
     guess = prompt(promptWarning +' Guess again: how many Fortnite wins do I have this week?');
     console.log('Guess is: ' + guess);
-    
     console.log('guessCount is ' + guessCount);
     console.log('about to return to top of while loop');
 }
@@ -118,22 +116,21 @@ if (guess === null) {
     if(guessCount == 4){
         alert('You Suck!');
     }
-
-    /*
-    if (guessCount < 4) {
-        alert('That was guess ' + guessCount + ' you have 4 total guesses to get it right.');
-    } */
-
 }
 
 var hero = ['BATMAN', 'SPIDERMAN', 'GREEN ARROW', 'GREEN LANTERN', 'IRON MAN']; 
 var heroAnswer = prompt('Can you guess any of my favorite super heroes?');
 var heroAnswerTrimmedToUpper = heroAnswer.toUpperCase().trim();
-
-if (hero.indexOf(heroAnswerTrimmedToUpper) >= 0) {
-    alert('Yes! ' + heroAnswer + ' is one of my favorites!');
-} else {
-    alert('Nope');
+var heroGuess = 0;
+while(hero.indexOf(heroAnswerTrimmedToUpper) < 0 && heroGuess < 5){
+    if (hero.indexOf(heroAnswerTrimmedToUpper) >= 0) {
+        alert('Yes! ' + heroAnswer + ' is one of my favorites!');
+        heroGuess = 7;
+    } else {
+        promptWarning = ('Nope -');
+        heroGuess ++;
+    }
+    console.log('HeroGuess: ' + heroGuess);
+    heroAnswer = prompt(promptWarning + 'Try again: Can you guess any of my favorite super heroes?');
 }
-
-
+alert('You guessed wrong 6 times!');
